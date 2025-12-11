@@ -18,7 +18,7 @@ class TadlaBioStore {
   // Load products from JSON file
   async loadProducts() {
     try {
-      const response = await fetch("/data/products.json");
+      const response = await fetch("./data/products.json");
       if (!response.ok) {
         throw new Error("Failed to load products");
       }
@@ -675,4 +675,5 @@ let store;
 document.addEventListener("DOMContentLoaded", () => {
   store = new TadlaBioStore();
 });
+
 
